@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Vallvera's Maze</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="introScreen">
+    <h1>VALLVERA'S MAZE</h1>
+    <p>Recoge todos los trofeos y encuentra la salida</p>
+    <button id="startBtn">START</button>
+  </div>
+
+  <div id="trophyMsg"></div>
+  <canvas id="gameCanvas" width="800" height="600" style="display:none;"></canvas>
+
+  <audio id="bgMusic" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="refreshBtn" style="display:none;">Volver al menú</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
