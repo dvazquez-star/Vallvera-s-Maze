@@ -138,3 +138,37 @@ document.getElementById("startBtn").addEventListener("click", ()=>{
   document.getElementById("bgMusic").play();
   loop();
 });
+const achievements = {
+  "Orden 18": false,
+  "Mensajes": false,
+  "Finales": false,
+  "Ultima Voluntad": false,
+  "Curioso": false,
+  "Tramposo": false,
+  "Fuera de la ley": false,
+  "Fantasma": false,
+  "Master Maze": false,
+  "A ciegas": false,
+  "Rompedor": false
+};
+
+// Chequear logros
+function checkAchievements(){
+  if(collected>=18 && !achievements["Orden 18"]){
+    achievements["Orden 18"]=true;
+    showTrophyMsg("¡Logro desbloqueado: Orden 18!");
+  }
+  if(collected===NUM_TROPHYS && !achievements["Ultima Voluntad"]){
+    achievements["Ultima Voluntad"]=true;
+    showTrophyMsg("¡Logro desbloqueado: Ultima Voluntad!");
+  }
+  // Aquí puedes añadir el resto de los logros
+}
+
+// Función para marcar logro completado desde otro evento
+function completeAchievement(name){
+  if(achievements[name]) return;
+  achievements[name]=true;
+  showTrophyMsg(`¡Logro desbloqueado: ${name}!`);
+}
+
