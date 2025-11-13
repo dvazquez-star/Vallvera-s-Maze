@@ -6,13 +6,16 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div id="introScreen">
   <h1>VALLVERA'S MAZE</h1>
   <p>Recoge todos los trofeos y encuentra la salida</p>
   <button id="startBtn">START</button>
 </div>
 
-<div id="achievementMsg"></div>
+<div id="trophyMsg"></div>
+<div id="secretMsg"></div>
+<div id="achieveMsg"><p id="achieveText"></p></div>
 <canvas id="gameCanvas" width="800" height="600" style="display:none;"></canvas>
 
 <audio id="bgMusic" loop>
@@ -20,6 +23,5 @@
 </audio>
 
 <script src="game.js"></script>
-<script src="achievements.js"></script>
 </body>
 </html>
